@@ -1,0 +1,17 @@
+/*
+*  Preloader
+*/
+#loader {position: absolute;left: 50%;top: 50%;z-index: 1;margin: -75px 0 0 -75px;}
+
+#content{display: block;}
+
+
+
+/**
+* Animate Bottom
+*/
+.animate-bottom {position: relative;-webkit-animation-name: animate;-webkit-animation-duration: 1s;animation-name: animate;animation-duration: 1s}
+
+@-webkit-keyframes animate { from {bottom: -100px;opacity: 0} to {bottom: 0;opacity: 1} }
+
+@keyframes animate { from {bottom: -100px;opacity: 0} to {bottom: 0;opacity: 1} }
