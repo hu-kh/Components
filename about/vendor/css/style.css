@@ -1,0 +1,143 @@
+*, html, body{
+    font-family: Navilu, Navilu, Navilu, monospace;
+}
+
+.special-font{font-family: 'Great Vibes', cursive;font-weight: bold;color: #ffffff;}
+
+.p-tag{
+    color: #ffffff !important;
+}
+
+.img-name{
+    height: 96px;
+}
+
+.hr-title{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    width: 100px;
+    color: #cccccc;
+    border-bottom: 2px solid #fff;
+    float: left;
+}
+
+.facebook-img, .twitter-img, .github-img, .email-img{
+    width: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.bg-main-img{
+    background-image: url(../img/bg-main-img.jpg);
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    z-index: 1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.me{
+    height: 200px;
+    border-radius: 100px;
+    border: 9px solid #30223e;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.sm-display-none{
+    display: block;
+}
+
+.xl-display-none{
+    display: none;
+}
+
+.hr-contact{
+    border-bottom: 1px solid #6a6161;
+}
+
+.img-hover:hover{
+    border: 9px solid #492d66;
+}
+
+@media only screen and (max-width: 767px) {
+    .sm-center{
+        text-align: center;
+    }
+
+    .img-name{
+        height: 80px;
+    }
+
+    .sm-display-none{
+        display: none;
+    }
+
+    .xl-display-none{
+        display: block;
+    }
+
+    .hr-title{
+        width: 50px;
+        margin-left: 30%;
+    }
+}
+
+
+/**
+* Fade out
+ */
+.fade-name, .fade-sm, .fade-hr, .fade-sm-small, .fade-text{
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.user-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
