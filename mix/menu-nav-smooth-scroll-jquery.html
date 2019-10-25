@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style>
+#services, #contact {
+    position:absolute;
+    padding:10px;
+    background:red;
+    top:3500px;
+}
+</style>
+<script src="https://huseyinkhalil.de/vendor/js/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body>
+<div class="nav"><a href="#services">Services</a>
+<div class="nav"><a href="#contact">contact</a>
+</div>
+<div id="services">content</div>
+<div id="contact">content</div>
+<script>
+$('.nav a').click(function (e) {
+    
+    var linkHref = $(this).attr("href");
+    var idElement = linkHref.substr(linkHref.indexOf("#"));
+    $('html, body').animate({
+        scrollTop: $(idElement).offset().top
+    }, 1000);
+    return false;
+});
+</script>
+
+</body>
+</html>

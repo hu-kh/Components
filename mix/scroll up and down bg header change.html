@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<script src="https://huseyinkhalil.de/vendor/js/jquery-3.3.1.slim.min.js"></script>
+<style>
+body{background-color: #222;;}
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left :0;
+  padding: 2rem;
+  text-align: center;
+  color: black;
+  font-family: sans-serif;
+  background-color: grey;
+  transition: 0.3s;
+}
+
+.scrolled{
+  background-color: dodgerblue;
+  transition: 0.3s;
+}
+
+footer{height: 200vh; width: 100%;}
+</style>
+<script>
+$(function() {
+    var header = $(".navbar");
+  
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+        if (scroll >= 50) {
+            header.addClass("scrolled");
+        } else {
+            header.removeClass("scrolled");
+        }
+    });
+  
+});
+</script>
+</head>
+<body>
+
+<div class="navbar">
+  scroll up and down to see it in action
+</div>
+<footer></footer>
+
+
+</body>
+</html>

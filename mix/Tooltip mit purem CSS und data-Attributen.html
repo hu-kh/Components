@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        .tooltip{
+            position: relative;
+        }
+        .tooltip:after{
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 130%;
+            left: 20%;
+            background: #ffffff;
+            padding: 5px 15px;
+            color: black;
+            -webkit-border-radius: 2px;
+            -moz-border-radius : 2px;
+            border-radius : 2px;
+            white-space: nowrap;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease;
+            -moz-transition : all 0.4s ease;
+            transition : all 0.4s ease;
+        }
+        .tooltip:hover:after {
+            bottom: 100%;
+            opacity: 1;
+        }
+    </style>
+    <script></script>
+</head>
+<body style="background-color: #343a40">
+<br><br>
+
+<span  class="tooltip" data-tooltip="title image 1">
+    <img src="del.png" title="" alt="">
+</span>
+
+
+<span  class="tooltip" data-tooltip="title image 2">
+    <img src="del.png" title="" alt="">
+</span>
+
+
+</body>
+</html>

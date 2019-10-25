@@ -1,8 +1,11 @@
 ## About
-About me a single page
+About me a single page.
 
 ## Preloader
-Simple Preloader build with css and Pure js
+Simple Preloader build with css and Pure js.
 
 ## Google fonts
-my fav google fonts
+My fav google fonts.
+
+## mix
+Random HTML CSS JS files.
