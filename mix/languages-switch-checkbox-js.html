@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style></style>
+
+<script  src="https://huseyinkhalil.de/vendor/js/jquery-3.3.1.slim.min.js"></script>
+
+<script>
+
+var languages = null;
+
+$(document).ready(function(){
+    // do your ajax here and set the languages variable
+languages = {"lang":
+                {
+                    "english":{
+                        "login":"Login"
+                    },
+                    "arabic":{
+                        "login":"dxoel"
+                    }
+                }
+            };
+
+  $('input[name="radio-choice"]').click(function(){
+    if ($(this).is(':checked')) {
+        $('#login-label b').text(languages.lang[$(this).data('language')].login);
+    }
+  });
+});
+
+</script>
+</head>
+<body>
+
+<input type="radio" name="radio-choice" id="Language-arabic" data-language="arabic" value="Arabic"/>
+<label for="radio-choice-1">Arabic</label>
+
+<input type="radio" name="radio-choice" id="Language-english" data-language="english" value="English"/>
+<label for="radio-choice-4">English</label>
+
+<div><label for="declarationNumber" style="margin-left:30px" id="login-label"><b>Login</b></label></div>
+
+</body>
+</html>
