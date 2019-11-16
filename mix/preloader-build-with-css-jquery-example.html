@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style>
+#preloader {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    position: fixed;
+    background-color: #dca61e;
+
+}
+
+#loading-animation {
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      margin: -100px 0 0 -100px; 
+      /*background: url('') center center no-repeat;*/
+}
+
+</style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<div id="preloader">
+    <div id="loading-animation"></div>
+</div>
+
+
+content will be here....
+
+
+
+<script src="https://huseyinkhalil.de/vendor/js/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+        var preloaderDelay = 350,
+                preloaderFadeOutTime = 800;
+
+        function hidePreloader() {
+            var loadingAnimation = $('#loading-animation'),
+                    preloader = $('#preloader');
+            loadingAnimation.fadeOut();
+            preloader.delay(preloaderDelay).fadeOut(preloaderFadeOutTime);
+        }
+
+        hidePreloader();
+    });
+</script>
+
+</body>
+</html>
