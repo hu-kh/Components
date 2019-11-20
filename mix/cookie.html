@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML Code</title>
+<style>
+.cookie-notification {
+    background: #fff;
+    bottom: -100%;
+    box-shadow: 4px 3px 16px -7px rgb(132, 132, 132);
+    padding: 20px;
+    position: fixed;
+    width: 226px;
+    z-index: 1000;
+}
+.cookie-notification.active {
+    display: block;
+}
+
+a > span{color:#007bff;padding-left:3px;margin-top: -4px;}
+.close-icon{
+float:right;
+}
+@media only screen and (max-width:700px){
+.cookie-notification  {
+width: 91.5%;
+}
+}
+
+.p-tag{
+margin-bottom:0;
+}
+
+</style>
+<script></script>
+</head>
+<body>
+
+<div class="cookie-notification active" id="js-cookie-notification" style="bottom: 20px;">
+<a class="" href="#"><span class="close-icon">x</span></a>
+<p class="p-tag">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. <a class="" href="#">illum  dolore</a>.</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+

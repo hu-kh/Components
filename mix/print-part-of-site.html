@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style></style>
+<script>
+function printInfo(ele) {
+    var openWindow = window.open("", "title", "attributes");
+    openWindow.document.write(ele.previousSibling.innerHTML);
+    openWindow.document.close();
+    openWindow.focus();
+    openWindow.print();
+    openWindow.close();
+}
+
+</script>
+</head>
+<body>
+<div id="....">
+    <iframe>
+        content to print
+    </iframe><a href="#" onclick="printInfo(this)">Print</a>
+</div>
+
+
+</body>
+</html>

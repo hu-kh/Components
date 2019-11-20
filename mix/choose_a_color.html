@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CP</title>
+	<script type="text/javascript">
+	  function processData(c1){
+		var cv1 = document.getElementById(c1).value;
+		window.ro.innerHTML = cv1;
+	  }
+	</script>
+</head>
+<body>
+ <h2>HTML5 Color Picker</h2>
+  <b>Choose a Color then Click Submit. </b>
+  <input type="Color" name="" id="color1"/><br/>
+  <p id="ro">0</p>
+  
+  <input type="button" onClick="processData('color1')" value="< submit >"/>
+ 
+</body>
+</html>

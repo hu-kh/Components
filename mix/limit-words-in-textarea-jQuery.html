@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+<style></style>
+<script>
+
+$(document).ready(function() {
+  $("#word_count").on('keyup', function() {
+    var words = this.value.match(/\S+/g).length;
+
+    if (words > 10) {
+      // Split the string on first 10 words and rejoin on spaces
+      var trimmed = $(this).val().split(/\s+/, 10).join(" ");
+      // Add a space at the end to make sure more typing creates new words
+      $(this).val(trimmed + " ");
+    }
+    else {
+      $('#display_count').text(words);
+      $('#word_left').text(10-words);
+    }
+  });
+}); 
+
+
+</script>
+</head>
+<body>
+
+<textarea name="txtScript" id="word_count" cols="20" rows="5"></textarea>
+Total word Count : <span id="display_count">0</span> words.
+
+</body>
+</html>

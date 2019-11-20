@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>progress</title>
+    <style>
+        /*progress*/
+        progress {
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            height: 14px;
+            z-index: 1030;
+            background-color: #fff;
+            border: 1px solid #fff;
+
+            -webkit-appearance: none;
+            appearance: none;
+        }
+    </style>
+</head>
+<body>
+
+<progress max="100" value="0"></progress>
+
+<script>
+    let l = 100;
+    for (let i = 0; i < l; i++) {
+        document.write('content <br/>');
+    }
+</script>
+
+<script>
+    /**
+     * Progress
+     * @type {HTMLProgressElement}
+     */
+    let trackL,
+        windowsH,
+        documentH,
+        getProgressBar = document.querySelector('progress');
+
+    let isTicking = false;
+
+    function getDocumentH() {
+        let d = document;
+        return Math.max(
+            d.body.scrollHeight, d.documentElement.scrollHeight,
+            d.body.offsetHeight, d.documentElement.offsetHeight,
+            d.body.clientHeight, d.documentElement.clientHeight
+        );
+    }
+
+    function getMeasurements() {
+        windowsH = window.innerHeight || (document.documentElement || document.body).clientHeight;
+        documentH = getDocumentH();
+        trackL = documentH - windowsH
+    }
+
+    function requestTick() {
+        if (!isTicking) {
+            requestAnimationFrame(update);
+            isTicking = true;
+        }
+    }
+
+    function update() {
+        let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        let pctScrolled = scrollTop / trackL * 100;
+        Math.floor(pctScrolled);
+        getProgressBar.value = pctScrolled;
+
+        isTicking = false;
+    }
+
+    getMeasurements();
+    window.addEventListener('scroll', requestTick, false);
+    window.addEventListener("resize", getMeasurements, false);
+</script>
+
+</body>
+</html>

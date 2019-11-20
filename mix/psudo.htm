@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<title>CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<style>
+	input[type=checkbox] {
+		display: none;
+	}
+	
+	input[type=checkbox]:checked~.remove-check {
+		display: none;
+	}
+	
+	input[type=checkbox]:checked~#email {
+		display: block;
+	}
+	
+	#email {
+		display: none;
+	}
+	
+	
+	/*  ------ Just styles ------ */
+	
+	input[type=text] {
+		width: 225px;
+		padding: 12px 14px;
+	}
+	
+	body {
+		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 14px;
+		line-height: 1;
+		color: #222222;
+	}
+	
+	.btn {
+		width: auto;
+		background: #2ba6cb;
+		border: 1px solid #1e728c;
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+		box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+		color: white;
+		cursor: pointer;
+		display: inline-block;
+		font-family: inherit;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 1;
+		margin: 0;
+		padding: 10px 20px 11px;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		-webkit-transition: background-color 0.15s ease-in-out;
+		-moz-transition: background-color 0.15s ease-in-out;
+		-o-transition: background-color 0.15s ease-in-out;
+		transition: background-color 0.15s ease-in-out;
+	}
+	
+	.btn:hover {
+		background: #006582;
+	}
+</style>
+<body>
+
+<div class="container mt-5">
+	
+	<div class="row">
+		<div class="col-md-12">
+			<label for="reveal-email" class="btn" style="width: 300px"> Sign Up</label>
+			<input type="checkbox" id="reveal-email" role="button">
+			
+			<div id="email">
+				<form id="email-form" class="nice" action="" method="post">
+					<input class="input-text required email" type="text" name="EMAIL" id="id_email" placeholder="Email" />
+					<input type="hidden" name="name" id="id_name_email">
+					<a class="btn">Apply</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

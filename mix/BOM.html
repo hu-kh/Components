@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<title>- BOM -</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equi="content-Type" content="text/html; charset"utf-8"/> 
+	 <meta name="robots" content="nofollow" />
+      <head>
+       <style>
+        body {
+		height: 100%;
+		position: relative;
+		padding: 10px;
+		margin: 0;
+	    font-family: "Montserrat";
+	    background: #000;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.2;			
+        }
+        p, h2{
+        color: #777777;
+        color: #7f7f7f;           
+        } 
+        </style>
+      <script>
+        function myFunction() {
+	    var w = window.outerWidth;
+	    var h = window.outerHeight;
+	    var text = "Windows size: " + "</br>  width = " + w + ", height = " + h;
+	    document.getElementById('ex_50').innerHTML = text;
+        }     
+	</script>
+ </head>
+ 
+ <body onresize="myFunction()">
+
+ <h2 style="text-align:center; text-shadow: 0.5px 0.8px 0.5px yellow;">Browser Object Model</h2>
+ 
+  <p id="ex_01"></p>
+	<script>
+		document.getElementById('ex_01').innerHTML = Date();
+	</script>
+  <p id="ex_02"></p>
+	<script>
+		document.getElementById('ex_02').innerHTML = "The name of brower is :" +"</br>"+ navigator.appCodeName;
+	</script>
+  <p id="ex_03"></p>
+	<script>
+			var txt = "The user-agent header sent by the browser to the server : " +"</br>";
+	        document.getElementById('ex_03').innerHTML = txt + navigator.userAgent;
+	</script>
+  <p id="ex_04"></p>
+	<script>
+	        document.getElementById('ex_04').innerHTML = "The Navigator Platform is :  " +"</br>" + navigator.platform;
+	</script>
+  <p id="ex_05"></p>
+	<script>
+	        document.getElementById('ex_05').innerHTML = "The App-Product is :  " +"</br>" + navigator.product;
+	</script>
+  <p id="ex_06"></p>
+	<script>
+	        document.getElementById('ex_06').innerHTML = "The Title of this document :  " +"</br>" + document.title;
+	</script>
+  <p id="ex_07"></p>
+	<script>
+	        document.getElementById('ex_07').innerHTML = "The App-Code-Name is :  " +"</br>" + navigator.appName;
+	</script>
+  <p id="ex_08"></p>
+	<script>
+		 document.getElementById('ex_08').innerHTML = "Language of this browser is :  " +"</br>" + navigator.language;
+	</script>
+  <p id="ex_09"></p>
+	<script>
+	   	document.getElementById('ex_09').innerHTML = "The browser is online:  " +"</br>" + navigator.onLine;
+	</script>
+  <p id="ex_10"></p>
+	<script>
+		document.getElementById('ex_10').innerHTML = "Cookies is enabled :  " +"</br>" + navigator.cookieEnabled;
+	</script>
+  <p id="ex_11"></p>
+	<script>
+		document.getElementById('ex_11').innerHTML = "Java is enabled :  " +"</br>" + navigator.javaEnabled();
+	</script>
+  <p id="ex_12"></p>
+	<script>
+	        document.getElementById('ex_12').innerHTML = "The Cookies associated with this document :  " +"</br>" + document.cookie;
+	</script>
+  <p id="ex_13"></p>
+	<script>
+	        document.getElementById('ex_13').innerHTML = "The number of URLs in history list :  " +"</br>" + history.length;
+	</script>
+  <p id="ex_14"></p>
+	<script>
+	        document.getElementById('ex_14').innerHTML = "The page protocol is :  " +"</br>" + window.location.protocol;
+	</script>
+  <p id="ex_15"></p>
+	<script>
+	       document.getElementById('ex_15').innerHTML = "The full URL of this page is :  " +"</br>" + window.location.href;
+	</script>
+  <p id="ex_16"></p>
+	<script>
+	       document.getElementById('ex_16').innerHTML = "The Current Location is :  " +"</br>" + window.navigator.geolocation;
+	</script>
+  <p id="ex_17"></p>
+	<script>
+	       document.getElementById('ex_17').innerHTML = "The port is :  " +"</br>" + window.location.port;
+	</script>
+  <p id="ex_18"></p>
+	<script>
+	       document.getElementById('ex_18').innerHTML = "The Domin Name is :  " +"</br>" + document.domain;
+	</script>
+  <p id="ex_19"></p>
+	<script>
+	       document.getElementById('ex_19').innerHTML = "The Protocol, Hostname and Port Number of a URL :  " +"</br>" + navigator.origin;
+	</script>
+  <p id="ex_20"></p>
+	<script>
+	       document.getElementById('ex_20').innerHTML = "The page hostname is :  " +"</br>" + window.location.hostname;
+	</script>
+  <p id="ex_21"></p>
+	<script>
+	       document.getElementById('ex_21').innerHTML = "The Referrer of this document :  " +"</br>" + document.referrer;
+	</script>
+  <p id="ex_22"></p>
+	<script>
+		   document.getElementById('ex_22').innerHTML = "OS-CPU is :" + "</br>" + window.navigator.oscpu;
+	</script>
+  <p id="ex_23"></p>
+	<script>
+		   document.getElementById('ex_23').innerHTML = "The Hardware Concurrency is :" +"</br>"+ window.navigator.hardwareConcurrency;
+	</script>	
+	 <p id="ex_24"></p>
+	<script>
+	       document.getElementById('ex_24').innerHTML = "The Length of the Local Storage is/are :" +"</br>" + localStorage.length;	
+   	</script>
+	
+	<script>
+		
+   	</script>
+	
+	<!-- END OF BODY -->
+	<p id="ex_50"></p>
+	<script>
+	       localStorage.clear();
+	</script>
+	<!-- FOOTER -->
+   <h2 style="text-align:center; text-shadow: 0.5px 0.8px 0.5px yellow;">* * * *</h2>
+ </body>
+</html>

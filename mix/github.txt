@@ -1,0 +1,20 @@
+# crating a new branch and check it out
+	=> git branch -b hello-world
+
+# git status 
+# git branch
+# git commit -m "message here"
+# git add *
+
+# After changes to have a new branch
+	=> git push origin hello-world
+# Merge hello-world branch into Master
+	=> git checkout master
+	=> git merge hello-world
+# delete branch hello-world
+	=> git branch -d hello-world
+# pushing changes to github
+	=> git push origin master
+# the branch will not be deleted and to do so
+	=> git push origin --delete hello-world
+	

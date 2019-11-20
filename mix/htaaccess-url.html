@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style></style>
+<script></script>
+</head>
+<body>
+
+USING WWW AND NON-WWW DOMAINS WITH AN SSL CERTIFICATE
+Many third-party SSL certificates are only valid for one specific domain. For this reason, web site owners often set up an SSL certificate for the www subdomain (for example, www.example.com). However, this means that visitors to the site may receive a security warning if they go to example.com without the www prefix.
+
+Clearly, you want visitors to be able to use an SSL connection whether they visit example.com or www.example.com. To enable this functionality, you can use Apache rewrite rules in a custom .htaccess file.
+
+The following lines demonstrate how to redirect visitors who enter a domain name without the www prefix to a secure connection. With these settings enabled on your web site, visitors who go to example.com or www.example.com (where example.com represents your domain) both obtain an SSL connection:
+---------- htacess
+RewriteEngine on
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+-----
+
+
+
+
+
+
+
+</body>
+</html>

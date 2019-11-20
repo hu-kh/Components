@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- checkbox-->
+<script>
+function toggle_checkboxes(id) {
+  var inputs = document.getElementById(id).getElementsByTagName("input");
+  for (var x = 0; x < inputs.length; x++) {
+    if (inputs[x].type == 'checkbox') {
+      inputs[x].checked = !inputs[x].checked;
+    }
+  }
+}
+function uncheck_checkboxes(id) {
+  var inputs = document.getElementById(id).getElementsByTagName("input");
+  for (var x = 0; x < inputs.length; x++) {
+    if (inputs[x].type == 'checkbox') {
+      inputs[x].checked = false;
+    }
+  }
+}
+function check_checkboxes(id) {
+  var inputs = document.getElementById(id).getElementsByTagName("input");
+  for (var x = 0; x < inputs.length; x++) {
+    if (inputs[x].type == 'checkbox') {
+      inputs[x].checked = true;
+    }
+  }
+}
+</script>
+
+
+
+<div id="chks">
+  <label><input type="checkbox" name="" /> Check 1</label>
+  <br>
+  <label><input type="checkbox" name="" checked /> Check 2</label>
+  <br>
+  <label><input type="checkbox" name="" /> Check 3</label>
+  <br>
+  <label><input type="checkbox" name="" checked /> Check 4</label>
+  <br>
+  <label><input type="checkbox" name="" /> Check 5</label>
+  <br>
+</div>
+<input type="button" value="Toggle" onclick='toggle_checkboxes("chks");' />
+<input type="button" value="Uncheck All" onclick='uncheck_checkboxes("chks");' />
+<input type="button" value="check All" onclick='check_checkboxes("chks");' />
+<br><br>
+
+
+
+<script>
+//radio
+function toggle_radio(id) {
+  var inputs = document.getElementById(id).getElementsByTagName("input");
+  for (var x = 0; x < inputs.length; x++) {
+    if (inputs[x].type == 'radio') {
+      inputs[x].checked = !inputs[x].checked;
+    }
+  }
+}
+function check_radio(id) {
+  var inputs = document.getElementById(id).getElementsByTagName("input");
+  for (var x = 0; x < inputs.length; x++) {
+    if (inputs[x].type == 'radio') {
+      inputs[x].checked = true;
+    }
+  }
+}
+
+function uncheck_radio(id) {
+  var inputs = document.getElementById(id).getElementsByTagName("input");
+  for (var x = 0; x < inputs.length; x++) {
+    if (inputs[x].type == 'radio') {
+      inputs[x].checked = false;
+    }
+  }
+}
+</script>
+<!-- ##################################################################-->
+<!-- radio-->
+<div id="rdio">
+  <label><input type="radio" name="" /> radio 6</label>
+  <br>
+ <label><input type="radio" name="" /> radio 7</label>
+  <br>
+ <label><input type="radio" name="" /> radio 8</label>
+  <br>
+ <label><input type="radio" name="" /> radio 9</label>
+  <br>
+ <label><input type="radio" name="" /> radio 10</label>
+  <br>
+</div>
+<input type="button" value="toggle" onclick='toggle_radio("rdio");' />
+<input type="button" value="none of them" onclick='uncheck_radio("rdio");' />
+<input type="button" value="all of them" onclick='check_radio("rdio");' />
+
+
+</body>
+</html>

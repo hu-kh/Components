@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function byId(e){return document.getElementById(e);}
+function newEl(tag){return document.createElement(tag);}
+function newTxt(txt){return document.createTextNode(txt);}
+
+function mInit()
+{
+    var src = byId('src');
+
+    src.addEventListener('keydown', inputChange, false);
+    src.addEventListener('keyup', inputChange, false);
+    src.addEventListener('blur', inputChange, false);
+    src.addEventListener('change', inputChange, false);
+    inputChange();  // process any thing that's written in the text area when the page loads.
+}
+
+function inputChange()
+{
+    var tgt = byId('tgt');
+    newText = byId('src').value;
+    byId('tgt').src = "data:text/html;charset=utf-8," + escape(newText);
+}
+
+window.addEventListener('load', mInit, false);
+
+</script>
+<style>
+iframe, textarea
+{
+    width: 45%;
+    height: 300px;
+}
+</style>
+</head>
+<body>
+ <textarea id='src'></textarea> 
+ <iframe id='tgt'></iframe>
+</body>
+</html>

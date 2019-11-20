@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML Code</title>
+<style></style>
+
+</head>
+<body>
+
+<script>
+	
+	function re(e){
+        let doc =  document.getElementById("t");
+            //note i need to pass the event as an argument to the function
+            let width = e.target.outerWidth;
+            let height = e.target.outerHeight;
+        	doc.innerHTML = "w/h" + width + "/" + height;
+	}
+	
+  
+    window.addEventListener("resize", re);
+</script>
+<div id="t"></div>
+</body>
+</html>

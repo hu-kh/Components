@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<style>
+div { display:none; }
+</style>
+</head>
+<body>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<div>Content</div>
+<a href="#" id="load">Load More</a>
+
+<script>
+$(function(){
+    $("div").slice(0, 10).show(); // select the first ten
+    $("#load").click(function(e){ // click event for load more
+        e.preventDefault();
+        $("div:hidden").slice(0, 10).show(); // select next 10 hidden divs and show them
+        if($("div:hidden").length == 0){ // check if any hidden divs still exist
+            alert("No more divs"); // alert if there are none left
+        }
+    });
+});
+
+</script>
+</body>
+</html>
+

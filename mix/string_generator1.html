@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+ <html lang="en">
+  <head> 
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript</title>
+	<style>
+		body, html{text-align:center;font-family:Times, Georgia, serif;font-size:16px;color:#494949;padding-top:30px;}
+	</style>
+  </head>
+  <body>
+  <div id="random_n" title="click it">Random Text Generator.</div>
+	<script>
+		var div = document.getElementById("random_n");
+		    div.onclick = function(){
+			"use strict";
+				var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZTabcdiefghijklmnopqrstuvwxyz0123456789",
+					string_length = 20,
+					random_string = '';
+				for (var i=0; i<string_length; i++){
+					var x = Math.random() * chars.length;
+					random_string += chars.substring(x,x-1);
+					
+					random_string = random_string.replace("A","%");
+					random_string = random_string.replace("8","%");
+					random_string = random_string.replace("0","%");
+					random_string = random_string.replace("C","%");
+					random_string = random_string.replace("F","%");
+				}
+			div.innerHTML = "<font color='#e47301'>" + random_string + "</font>";
+		}
+	</script>
+  </body>
+</html>
