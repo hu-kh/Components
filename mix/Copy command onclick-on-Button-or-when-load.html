@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Copy command onclick on Button or when load</title>
+    <style>
+    </style>
+</head>
+<body onload="runCopy();">
+
+<p>Textarea copy command</p>
+
+<label for="textarea"></label>
+<textarea id="textarea" cols="100" rows="12">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</textarea>
+<br>
+<button onclick="copy()">Copy</button>
+
+
+<script>
+    function copy() {
+        let textarea = document.getElementById("textarea");
+        textarea.style.backgroundColor = '#81a6ce';
+        textarea.select();
+        document.execCommand("copy");
+    }
+</script>
+
+<script>
+    function runCopy() {
+        setTimeout(copy, 2500);
+    }
+</script>
+
+
+</body>
+</html>
