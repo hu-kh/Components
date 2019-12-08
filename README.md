@@ -5,7 +5,7 @@ About me a single page.
 Simple Preloader build with css and Pure js.
 
 ## Google fonts
-My fav google fonts.
+fav google fonts.
 
 ## mix
 Random HTML CSS JS files.
