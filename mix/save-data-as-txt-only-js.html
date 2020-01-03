@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Download File as Text</title>
+</head>
+<body>
+	<form>
+		<textarea name="input">Snakes. Why'd it have to be snakes?</textarea>
+		<a href="javascript:void(0)" download="data.txt">save</a>
+	</form>
+ 
+	<script type="text/javascript">
+		var input = document.querySelector( "textarea[ name = 'input' ]" );
+		var download = document.querySelector( "a[ download ]" );
+		var downloadUrl = null;
+		input.addEventListener( "input", updateDownloadHref, false );
+		updateDownloadHref();
+		function updateDownloadHref() {
+			var blob = new Blob(
+				[ input.value ], 
+				{
+					type : "text/plain;charset=utf-8"
+				}
+			);
+
+			if ( downloadUrl ) {
+				URL.revokeObjectURL( downloadUrl );
+			}
+
+			downloadUrl = URL.createObjectURL( blob );
+			download.setAttribute( "href", downloadUrl );
+ 
+			console.group( "Object URL" );
+			console.log( "Text:", input.value );
+			console.log( "URL:", downloadUrl );
+			console.groupEnd();
+		}
+ 
+	</script>
+</body>
+</html>
