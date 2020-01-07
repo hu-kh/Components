@@ -7,8 +7,10 @@
 <style></style>
 <script>
 window.onload = function() {
-document. getElementById('v').innerHTML =
-"?v=" + released("1.0.9")+ join ("-") + new Date().toLocaleString().replace(",","").replace ("/", "").replace ("/", "").replace (":", "").replace (":", "").replace (" ", "").replace (" pm", "-") + Date.now().toString(7);
+    document. getElementById('v').innerHTML =
+    "?v=" + released("1.0.9")+ join ("-") + new Date().toLocaleString()
+    .replace(",","").replace ("/", "").replace ("/", "").replace (":", "").replace (":", "")
+    .replace (" ", "").replace (" PM", "-")+ Date.now().toString(7);
 
 function released(version){
 return  version;

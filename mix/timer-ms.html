@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style></style>
+</head>
+<body>
+
+<div id="timer" style="font-family:monospace;">00:00<small>.00</small></div>
+
+<script>
+var d = new Date();
+var n = d.getTime();
+var startTime = n;
+
+var tm=0;
+function updateTimer(){
+  d = new Date();
+  n = d.getTime();
+  var currentTime = n;  
+  tm = (currentTime-startTime);
+  
+  //tm +=1; 
+  // si el timer cuenta en centesimas de segundo
+  //tm = tm*10;
+  
+  var hours = Math.floor(tm / 1000 / 60 / 60);
+  var minutes = Math.floor(tm / 60000) % 60;
+  var seconds =  ((tm / 1000) % 60);
+  // saca los decimales ej 2 d{0,2}
+  var seconds = seconds.toString().match(/^-?\d+(?:\.\d{0,-1})?/)[0];
+  var miliseconds = ("00" + tm).slice(-3);
+  var centiseconds;
+
+  
+  // si el timer cuenta en centesimas de segundo
+  //tm = tm/10;
+
+
+  centiseconds = miliseconds/10;
+  centiseconds = (centiseconds).toString().match(/^-?\d+(?:\.\d{0,-1})?/)[0];
+
+  minutes = (minutes < 10 ? '0' : '') + minutes;
+  seconds = (seconds < 10 ? '0' : '') + seconds;
+  centiseconds = (centiseconds < 10 ? '0' : '') + centiseconds;
+  hours = hours + (hours > 0 ? ':' : '');
+  if (hours==0){
+    hours='';
+  }
+
+  document.getElementById("timer").innerHTML = hours + minutes + ':' + seconds + '<small>.' + centiseconds + '</small>';
+}
+
+var timerInterval = setInterval(updateTimer, 10);
+// clearInterval(timerInterval);
+</script>
+
+</body>
+</html>
