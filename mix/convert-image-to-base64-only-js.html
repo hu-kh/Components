@@ -1,35 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Image url Base64</title>
-<script>
-function toDataURL(src, callback, outputFormat) {
-  var img = new Image();
-  img.crossOrigin = 'Anonymous';
-  img.onload = function() {
-    var canvas = document.createElement('CANVAS');
-    var ctx = canvas.getContext('2d');
-    var dataURL;
-    canvas.height = this.naturalHeight;
-    canvas.width = this.naturalWidth;
-    ctx.drawImage(this, 0, 0);
-    dataURL = canvas.toDataURL(outputFormat);
-    callback(dataURL);
-  };
-  img.src = src;
-  if (img.complete || img.complete === undefined) {
-    img.src = src;
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image url Base64</title>
+  <style media="screen">
+  .ta{
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    margin: 10px;
   }
-}
-toDataURL('https://test.xy/favicon.ico',  function(dataUrl) {
-     document.getElementById("demo").innerHTML = dataUrl;
+
+  .output{
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    margin: 20px;
   }
-)
-</script>
+    textarea{
+      border: 0;
+      resize: none;
+      width: 100%;
+    }
+
+    .demo{
+      background: #eee;
+      font-size: 13px;
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
+
+ <div class="ta">
+   <textarea placeholder="Type image url .." id="txt" autofocus  rows="1"></textarea>
+ </div>
+  <div class="output">
     <div id="demo"></div>
+  </div>
+
+
+  <script>
+  function toDataURL(src, callback, outputFormat) {
+    var img = new Image();
+    img.crossOrigin = 'Anonymous';
+    img.onload = function() {
+      var canvas = document.createElement('CANVAS');
+      var ctx = canvas.getContext('2d');
+      var dataURL;
+      canvas.height = this.naturalHeight;
+      canvas.width = this.naturalWidth;
+      ctx.drawImage(this, 0, 0);
+      dataURL = canvas.toDataURL(outputFormat);
+      callback(dataURL);
+    };
+    img.src = src;
+    if (img.complete || img.complete === undefined) {
+      img.src = src;
+    }
+  }
+  
+  let keys = document.getElementById("txt");
+  keys.oninput = function(){
+    toDataURL(keys.value,  function(dataUrl) {
+      document.getElementById("demo").innerHTML = dataUrl;
+    });
+  }
+
+
+</script>
+
 </body>
 </html>
