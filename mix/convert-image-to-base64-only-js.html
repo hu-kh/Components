@@ -3,13 +3,9 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Image url Base64</title>
   <style media="screen">
-  .ta{
-    border-bottom: 1px solid #ddd;
-    padding: 0;
-    margin: 10px;
-  }
 
   .output{
     border-bottom: 1px solid #ddd;
@@ -20,24 +16,40 @@
       border: 0;
       resize: none;
       width: 100%;
+      padding: 8px;
+      background: #fff1c9;
+      height: 40px;
     }
 
     .demo{
       background: #eee;
-      font-size: 13px;
       width: 100%;
-      height: auto;
     }
+
+      #result{display: none;}
+
   </style>
 </head>
 <body>
 
- <div class="ta">
-   <textarea placeholder="Type image url .." id="txt" autofocus  rows="1"></textarea>
+ <div class="container">
+   <div class="row mt-5">
+     <div class="col-md-2"></div>
+     <div class="col-md-8">
+         <textarea placeholder="Type image url .." id="txt" autofocus  rows="1"></textarea>
+     </div>
+     <div class="col-md-2"></div>
+   </div>
+
+   <div class="row">
+     <div class="col-md-2"></div>
+     <div class="col-md-8" id="result">
+         <!-- <span id="demo"></span> -->
+         <textarea id="demo" style="padding: 8px; border-radius: 2px;height: 70vh;"></textarea>
+     </div>
+     <div class="col-md-2"></div>
+   </div>
  </div>
-  <div class="output">
-    <div id="demo"></div>
-  </div>
 
 
   <script>
@@ -59,12 +71,17 @@
       img.src = src;
     }
   }
-  
+
   let keys = document.getElementById("txt");
   keys.oninput = function(){
     toDataURL(keys.value,  function(dataUrl) {
       document.getElementById("demo").innerHTML = dataUrl;
     });
+    if (keys != "") {
+      document.getElementById("result").style.display = 'block';
+    }else {
+      document.getElementById("demo").value = '';
+    }
   }
 
 

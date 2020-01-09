@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Test</title>
+    <style type="text/css">
+      #foo{display: none;}
+    </style>
+  </head>
+  <body onload="display();">
+
+    <div id="foo">
+      <p>Hello, World!</p>
+    </div>
+
+<script>
+function display(){
+     setTimeout(function () {
+     document.getElementById('foo').style.display='block'}, 2000); return false;
+}
+</script>
+  </body>
+</html>
