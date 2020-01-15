@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style></style>
+<script>
+
+function t (){
+var str = "https://arbkb.de/index?search=text-on-bing&text=get-text-after-last-js-";
+var n = str.lastIndexOf('=');
+var result = str.substring(n + 1);
+document.getElementById('i').innerHTML = result;
+}
+</script>
+</head>
+<body ONLOAD="t()">
+
+
+<span id="i"></span>
+
+
+</body>
+</html>
