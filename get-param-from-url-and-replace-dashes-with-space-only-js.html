@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Param Url Value And Replace Dash With Space</title>
+<script>
+function paramRealText(){
+ // let url = window.location.href;
+    let url = "https://example.test/index?search=on-google&text=aaa-bbb-cccc-dddd-eee-fff";
+    var params = new window.URLSearchParams(url);
+   let value = params.get('text');
+   let result = value.split("-").join(" ").toLowerCase();
+   console.log('results: ' + result);
+   return result;
+}
+</script>
+</head>
+<body  onload="paramRealText();">
+  
+</body>
+</html>
