@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Share website</title>
+<style></style>
+</head>
+<body>
+
+<h4>Share website if you like it on:</h4>
+
+<script>document.write ('<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' + location.href + '">facebook</a>');</script>
+
+<br><br>
+
+<script>document.write ('<a target="_blank" href="https://twitter.com/home?status=' + document.title + ' ' + location.href + '">twitter</a>');</script>
+
+<br><br>
+
+<script>document.write ('<a target="_blank" href="mailto:?&subject=Link-Tipp: ' + document.title + '&body=' + location.href + '">email</a>');</script>
+
+<br><br>
+
+<script>
+if (navigator.userAgent.match(/iPhone|Android/i)) { document.write ('<a href="watsapp://send?text=Link-Tipp: ' + document.title + ' ' + location.href + '">whatsApp</a>') };</script>
+
+
+</body>
+</html>

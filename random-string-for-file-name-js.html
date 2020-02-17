@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style></style>
+</head>
+<body onload="add ();">
+<p id="demo">.........</p>
+<script>
+
+String.prototype.insert = function (index, string) {
+      if (index > 0)
+        return this.substring(0, index) + string + this.substring(index, this.length);
+      
+      return string + this;
+    };
+
+//Example of use:
+
+
+function add (){
+    var something = "MN1BV2CXZLKJHGF3DSAPOIYYTR4EWQ";
+    something = something.insert(3, "a") ;
+    something = something.insert(6, "p") ;
+    something = something.insert(9, "p") ;
+
+   something = something.insert(4, "-") ;
+  something = something.insert(9, "-") ;
+   something = something.insert(14, "-") ;
+  something = something.insert(19, "-") ;
+something = something.insert(24, "-") ;
+something = something.insert(29, "-") ;
+something = something.insert(34,"-") ;
+
+    document.getElementById ("demo").innerHTML =     something;
+}
+</script>
+
+</body>
+</html>
